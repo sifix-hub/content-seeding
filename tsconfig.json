@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+      "target": "ES2022",                   /* Specify ECMAScript target version (change as needed) */
+      "module": "CommonJS",              /* Specify module system (CommonJS for Node.js) */
+      "outDir": "./dist",                /* Output directory for compiled JavaScript */
+      "rootDir": ".",                /* Source directory for TypeScript files */
+      "strict": true,                    /* Enable all strict type-checking options */
+      "esModuleInterop": true,           /* Enable ES module interop */
+      "skipLibCheck": true,              /* Skip type checking of declaration files */
+      "forceConsistentCasingInFileNames": true, /* Enforce consistent letter casing in file names */
+      "resolveJsonModule": true          /* Allow importing .json files */
+    },
+    "include": [
+      "./**/*.ts"                   /* Include TypeScript files within the "src" directory */
+    ],
+    "exclude": [
+      "node_modules", "dist"                  /* Exclude the "node_modules" directory */
+    ]
+  }
+  
