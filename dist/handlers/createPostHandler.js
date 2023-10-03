@@ -39,6 +39,14 @@ async function createAndSavePosts(users) {
     }
 }
 async function startCronJob() {
+    // Establish a database connection
+    (0, connections_1.connectToDatabase)()
+        .then(() => {
+        console.log('Database connection established...........');
+    })
+        .catch((error) => {
+        console.error(`Error establishing database connection: ${error.message}`);
+    });
     // Schedule the task to run every 10 minutes
     console.log("Cron job started");
     node_cron_1.default.schedule('*/10 * * * *', async () => {
@@ -53,11 +61,3 @@ async function startCronJob() {
     });
 }
 exports.startCronJob = startCronJob;
-// Establish a database connection
-(0, connections_1.connectToDatabase)()
-    .then(() => {
-    console.log('Database connection established...........');
-})
-    .catch((error) => {
-    console.error(`Error establishing database connection: ${error.message}`);
-});

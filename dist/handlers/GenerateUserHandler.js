@@ -32,7 +32,6 @@ async function generateFakeUsersInBatch(batchSize) {
     }
     catch (error) {
         console.error(`Error generating fake users: ${error.message}`);
-        throw new Error(`Error generating fake users: ${error.message}`);
     }
 }
 async function generate50KFakeUsers() {

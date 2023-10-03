@@ -11,7 +11,7 @@ export interface IPost  {
   const postSchema: Schema = new Schema({
     
     content: { type: String, required:true },
-    date:{type:Date, required:true},
+    date:{type: String, required:true},
     user:{type:Schema.Types.ObjectId, ref: "User"},
   });
   

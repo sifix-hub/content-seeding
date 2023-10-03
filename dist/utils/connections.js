@@ -27,7 +27,7 @@ exports.connectionClose = exports.connectToDatabase = void 0;
 const mongoose_1 = __importStar(require("mongoose"));
 const connectToDatabase = async () => {
     try {
-        await (0, mongoose_1.connect)('mongodb+srv://db_user:' + process.env.MONGO_ATLAS_PWD + '@first-node-app.vqqlbny.mongodb.net/?retryWrites=true&w=majority&useNewUrlParser=true&useUnifiedTopology=true');
+        await (0, mongoose_1.connect)('mongodb+srv://db_user:' + process.env.MONGO_ATLAS_PWD + '@first-node-app.vqqlbny.mongodb.net/blog?retryWrites=true&w=majority&useNewUrlParser=true&useUnifiedTopology=true');
     }
     catch (err) {
         return err;

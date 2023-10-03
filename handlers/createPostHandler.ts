@@ -38,6 +38,14 @@ async function createAndSavePosts(users: IUser[]): Promise<void> {
 }
 
 export async function startCronJob () {
+  // Establish a database connection
+connectToDatabase()
+.then(() => {
+  console.log('Database connection established...........');
+})
+.catch((error) => {
+  console.error(`Error establishing database connection: ${error.message}`);
+});
 // Schedule the task to run every 10 minutes
 console.log("Cron job started");
 cron.schedule('*/10 * * * *', async () => {
@@ -51,11 +59,4 @@ cron.schedule('*/10 * * * *', async () => {
 });
 
 }
-// Establish a database connection
-connectToDatabase()
-  .then(() => {
-    console.log('Database connection established...........');
-  })
-  .catch((error) => {
-    console.error(`Error establishing database connection: ${error.message}`);
-  });
+

@@ -30,7 +30,7 @@ async function generateFakeUsersInBatch(batchSize: number): Promise<void> {
     console.log(`Generated ${batchSize} fake users`);
   } catch (error: any) {
     console.error(`Error generating fake users: ${error.message}`);
-    throw new Error(`Error generating fake users: ${error.message}`);
+    
   }
 }
 
